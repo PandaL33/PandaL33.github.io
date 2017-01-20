@@ -16,4 +16,4 @@ tags:
 ---
 
 ## 感谢
- 感谢HuxPro（https://github.com/Huxpro） 提供的Blog框架
+ 感谢HuxPro（https://github.com/Huxpro ）提供的Blog框架
