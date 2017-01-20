@@ -1,2 +1,3 @@
-# PandaL33.github.io
-PandaL33 Blog
+# PandaL33 Blog
+
+This blog uses the boilerplate of [Hux Blog](https://github.com/Huxpro/huxpro.github.io).
