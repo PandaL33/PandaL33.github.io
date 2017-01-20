@@ -1,11 +1,12 @@
 ---
-title:      "First Blog"
-layout:     default
-date:       2017-01-20 00:00:01
-author:     "PandaL33"
+layout:     post
+itle:      "Hello 2017"
+subtitle:   "Hello World, Hello Blog"
+date:       2017-01-20 16:00:00
+author:     "pandal33"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - Research
+    - Life
 ---
 
 <!-- Page Header -->
@@ -31,10 +32,10 @@ tags:
 <div class="container">
 	<div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<h4>Authors</h4>
-			<p>
-				PandaL33<br />
-			</p>					
-		</div>
+		<h4>Authors</h4>
+		<p>
+			PandaL33<br />
+		</p>					
+	</div>
 	</div>
 </div>
