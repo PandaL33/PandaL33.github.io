@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "GIS Map Export"
+title:      "Export GIS Map"
 subtitle:   " \"GIS\""
 date:       2017-01-20 20:00:00
 author:     "PandaL33"
