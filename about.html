@@ -5,40 +5,11 @@ description: "Who is PandaL33"
 header-img: "img/about-bg.jpg"
 ---
 
-<!-- Language Selector -->
-<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 </option>
-    <option value="1"> English </option>
-</select>
-
-<!-- Chinese Version -->
 <div class="zh">
-    <p>我是一只喜欢啃代码的胖达喵</p>
+    <p>A love crunching code Panda Meow</p>
 
-    <p>联系方式：pandal33 # outlook DOT com</p>
+    <p>Contact me：pandal33 # outlook DOT com</p>
 </div>
-
-<!-- English Version -->
-<div class="en">
-
-</div>
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    function onLanChange(index){
-        if(index == 0){
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }else{
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        }
-    }
-    onLanChange(0);
-</script>
-
 
 
 {% if site.duoshuo_username %}
