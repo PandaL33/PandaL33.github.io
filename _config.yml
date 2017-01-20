@@ -67,7 +67,7 @@ ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "LET US GO!"
+sidebar-about-description: "LET US GO !!!"
 sidebar-avatar: /img/avatar-pandal33.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
