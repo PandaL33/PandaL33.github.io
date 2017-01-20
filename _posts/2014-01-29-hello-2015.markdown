@@ -21,4 +21,4 @@ PandaL33 的 Blog 在2017年终于开通了，总算有个地方可以好好写�
 ---
 
 ## 感谢
- 感谢HuxPro提供的这Blog框架，Blog仓库：https://github.com/Huxpro/boilerplate
+ 感谢HuxPro提供的Blog框架，Blog仓库：https://github.com/Huxpro/boilerplate
