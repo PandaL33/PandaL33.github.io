@@ -19,15 +19,18 @@ tags:
 ### 1、Connectivity
 
 &emsp;&emsp;ArcCatlog中创建Network Dataset,需要设置网络的Connectivity（连通性），连通性有下面3中模式：
-1. Connecting Edges within a Connectivity Group
 
->>  可以设置“Endpoint Connectivity”，也可以设置“Any Vertex Connectivity”。第一种方式中，边和边只能在终点处相交，第二种方式则可以在边的任意位置相交。
-2. Connecting Edges through Junctions across Connectivity Group
+- Connecting Edges within a Connectivity Group
 
->> 能够将不同Connectivity Group中的Edge通过被不同Connectivity Group共享的Junctions连接。
-3. Elevation Fields
+&emsp;&emsp;可以设置“Endpoint Connectivity”，也可以设置“Any Vertex Connectivity”。第一种方式中，边和边只能在终点处相交，第二种方式则可以在边的任意位置相交。
 
->> 主要用于Network Dataset中检查Line Endpoints的Connectivity。每一个Edge Feature具备两个字段用来描述每一个端点的高程。
+- Connecting Edges through Junctions across Connectivity Group
+
+&emsp;&emsp;能够将不同Connectivity Group中的Edge通过被不同Connectivity Group共享的Junctions连接。
+
+- Elevation Fields
+
+&emsp;&emsp;主要用于Network Dataset中检查Line Endpoints的Connectivity。每一个Edge Feature具备两个字段用来描述每一个端点的高程。
 
 ### 2、Network Attribute
 
