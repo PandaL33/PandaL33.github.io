@@ -197,7 +197,8 @@ INASolver的数据成员为：
 /// <param name="_pDatasetName">数据集名称</param> 
 /// <param name="_pNetDatasetName">网络数据集名称</param> 
 /// <returns>网络数据集</returns> 
-public INetworkDataset GetNetDataset(IFeatureDataset pFeatureDataset, string _pDatasetName, string _pNetDatasetName)
+public INetworkDataset GetNetDataset(IFeatureDataset pFeatureDataset,
+ string _pDatasetName, string _pNetDatasetName)
 {
     IFeatureDatasetExtensionContainer pFeatureDatasetExtensionContainer =
     pFeatureDataset as IFeatureDatasetExtensionContainer; 
@@ -261,7 +262,8 @@ public void AddNALayer(INAContext pNaContext,AxMapControl Mainmap)
 /// <param name="_pFtClass">Stops的要素类</param> 
 /// <param name="_pPointC">路径点集合</param> 
 /// <param name="_pDist">捕捉距离 </param> 
-public void NAStops(INAContext _pNaContext, IFeatureClass _pFtClass, IPointCollection _pPointC, double _pDist)
+public void NAStops(INAContext _pNaContext, IFeatureClass _pFtClass,
+ IPointCollection _pPointC, double _pDist)
 {
     INALocator pNAlocator = _pNaContext.Locator;
     for (int i = 0; i < _pPointC.PointCount; i++)
