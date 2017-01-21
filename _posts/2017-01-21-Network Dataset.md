@@ -69,6 +69,7 @@ tags:
 7. 是否建立行驶方向
 7. 建立Network Dataset
  数据源：
+
 ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/network-dataset/network-dataset-1.jpeg)
 ### 创建网络数据集的实现：
 ```
@@ -160,6 +161,7 @@ public void CreateNetworkDataset(string _pWsName, string _pDatasetName, string _
 }
 ```
 创建网络数据集后数据变为：
+
 ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/network-dataset/network-dataset-2.jpeg)
 
 2、最短路径分析
@@ -167,9 +169,11 @@ public void CreateNetworkDataset(string _pWsName, string _pDatasetName, string _
 &emsp;&emsp;无向网络分析中需要用到两个主要接口：INAContext和INASolver。INAContext主要用来获取网络分析的对象，这些对象包含NetworkDataset、NASolver、NAClasses、NATraversalResult、 NALocator以及任何实现INAAgent接口的对象；INASolver主要用来创建NAContext和NALayer对象来执行实际的网络分析。
 
 INAContext的数据成员为：
+
 ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/network-dataset/network-dataset-3.jpeg)
 
 INASolver的数据成员为：
+
 ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/network-dataset/network-dataset-4.jpeg)
 
 最短路径分析的实现：
