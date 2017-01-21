@@ -11,7 +11,7 @@ tags:
 ## 前言
 
 在GIS制图完成后，需要将地图输出成不同的格式，如.emf、.pdf、*.jpg等格式，输出的文件可以方便在计算机上进行浏览查看。
-地图输出可以分为两大类：栅格数据和适量数据格，输出栅格数据的格式有BMP、JPG等，而输出矢量数据的格式有PDF、SVG等。
+地图输出可以分为两大类：栅格数据和矢量数据，输出栅格数据的格式有BMP、JPG等，而输出矢量数据的格式有PDF、SVG等。
 IExport接口作为地图输出的主要接口，其数据成员为：
 
 ![alt](http://github.com/PandaL33/PandaL33.github.io/in-post/export-map/export-map/export-map-1.jpeg)
