@@ -67,8 +67,8 @@ publicvoidExportEMF(IActiveView pActiveView,string pExportFileName)
 /// <param name="pExportFileName">输出路径</param>
 publicvoidExportPDF(IActiveView pActiveView,string pExportFileName)
 {
-IEnvelope pEnv = pActiveView.Extent;
-IExport pExport=newExportPDFClass();
+    IEnvelope pEnv = pActiveView.Extent;
+    IExport pExport=newExportPDFClass();
     pExport.ExportFileName= pExportFileName;
     pExport.Resolution=300;
     tagRECT exportRECT;
@@ -76,13 +76,12 @@ IExport pExport=newExportPDFClass();
     exportRECT.left =0;
     exportRECT.right = pActiveView.ExportFrame.right;
     exportRECT.bottom = pActiveView.ExportFrame.bottom;
-IEnvelope pPixelBoundsEnv =newEnvelopeClass();
+    IEnvelope pPixelBoundsEnv =newEnvelopeClass();
     pPixelBoundsEnv.PutCoords(exportRECT.left, exportRECT.top,
     exportRECT.right, exportRECT.bottom);
     pExport.PixelBounds= pPixelBoundsEnv;
-int hDC= pExport.StartExporting();
-    pActiveView.Output(hDC,(int)pExport.Resolution,ref  exportRECT,
-null,null);
+    int hDC= pExport.StartExporting();
+    pActiveView.Output(hDC,(int)pExport.Resolution,ref  exportRECT,null,null);
     pExport.FinishExporting();
     pExport.Cleanup();
 }
@@ -102,23 +101,22 @@ null,null);
 /// <param name="pOutputResolution">输出分辨率</param>
 publicvoidExportJPG(IActiveView pActiveView,String pExportFileName,Int32 pScreenResolution,Int32 pOutputResolution)
 {
-IExport pExport =newExportJPEGClass();
+    IExport pExport =newExportJPEGClass();
     pExport.ExportFileName= pExportFileName;
     pExport.Resolution= pOutputResolution;
     tagRECT pExportRECT;
     pExportRECT.left =0;
     pExportRECT.top =0;
     pExportRECT.right = pActiveView.ExportFrame.right *
-(pOutputResolution /pScreenResolution);
+    (pOutputResolution /pScreenResolution);
     pExportRECT.bottom = pActiveView.ExportFrame.bottom *
-(pOutputResolution /pScreenResolution);
-IEnvelope pEnvelope =newEnvelopeClass();
+    (pOutputResolution /pScreenResolution);
+    IEnvelope pEnvelope =newEnvelopeClass();
     pEnvelope.PutCoords(pExportRECT.left, pExportRECT.top,
     pExportRECT.right, pExportRECT.bottom);
     pExport.PixelBounds= pEnvelope;
-System.Int32 hDC = pExport.StartExporting();
-    pActiveView.Output(hDC,(System.Int16)pExport.Resolution,ref  pExportRECT,
-null,null);
+    System.Int32 hDC = pExport.StartExporting();
+    pActiveView.Output(hDC,(System.Int16)pExport.Resolution,ref  pExportRECT,null,null);
     pExport.FinishExporting();
     pExport.Cleanup();
 }
