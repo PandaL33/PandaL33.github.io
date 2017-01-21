@@ -23,6 +23,7 @@ GIS地图
 ## 地图输出实现
 
 ### 1、EMF输出
+```
 
 /// <summary>
 /// 以EMF格式输出地图
@@ -46,10 +47,12 @@ publicvoidExportEMF(IActiveView pActiveView,string pExportFileName)
     pExport.FinishExporting();
     pExport.Cleanup();
 }
+```
+
 输出结果：
 
 ### 2、PDF输出
-
+```
 /// <summary>
 /// 以PDF格式输出地图
 /// </summary>
@@ -76,10 +79,11 @@ null,null);
     pExport.FinishExporting();
     pExport.Cleanup();
 }
+```
 输出结果：
 
 ### 3、JPG输出
-
+```
 /// <summary>
 /// 以JPG格式输出地图
 /// </summary>
@@ -109,4 +113,5 @@ null,null);
     pExport.FinishExporting();
     pExport.Cleanup();
 }
+```
 输出结果：
