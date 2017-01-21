@@ -29,6 +29,22 @@ header-img: "img/about-bg.jpg"
     </p>
 </div>
 
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    function onLanChange(index){
+        if(index == 0){
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }else{
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        }
+    }
+    onLanChange(0);
+</script>
+
 {% if site.duoshuo_username %}
 <!-- 多说评论框 start -->
 <div class="comment">
