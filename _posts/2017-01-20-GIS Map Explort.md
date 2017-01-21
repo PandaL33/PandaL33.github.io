@@ -14,17 +14,17 @@ tags:
 地图输出可以分为两大类：栅格数据和矢量数据，输出栅格数据的格式有BMP、JPG等，而输出矢量数据的格式有PDF、SVG等。
 IExport接口作为地图输出的主要接口，其数据成员为：
 
-![alt](http://github.com/PandaL33/PandaL33.github.io/in-post/export-map/export-map/export-map-1.jpeg)
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-1.jpeg)
 
 IExport接口被10种输出格式的类实现，如下图：
 
-![alt](http://github.com/PandaL33/PandaL33.github.io/in-post/export-map/export-map/export-map-2.jpeg)
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-2.jpeg)
 
 这10个类对应了ArcGIS所支持的地图输出格式，同时这10个类也可以划分为两大类，即矢量格式和栅格格式。Window平台的分辨率一般为96dpi，而这个也是ArcGIS栅格数据输出的默认分辨率，而对于像PDF这样的分辨率，默认为300dpi。
 
 ## GIS地图
 
-![alt](http://github.com/PandaL33/PandaL33.github.io/in-post/export-map/export-map/export-map-3.jpeg)
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-3.jpeg)
 
 ## 地图输出实现
 
@@ -56,7 +56,7 @@ publicvoidExportEMF(IActiveView pActiveView,string pExportFileName)
 
 输出结果：
 
-![alt](http://github.com/PandaL33/PandaL33.github.io/in-post/export-map/export-map/export-map-4.jpeg)
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-4.jpeg)
 
 ### 2、PDF输出
 ```
@@ -89,7 +89,7 @@ null,null);
 ```
 输出结果：
 
-![alt](http://github.com/PandaL33/PandaL33.github.io/in-post/export-map/export-map/export-map-5.jpeg)
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-5.jpeg)
 
 ### 3、JPG输出
 ```
@@ -125,4 +125,4 @@ null,null);
 ```
 输出结果：
 
-![alt](http://github.com/PandaL33/PandaL33.github.io/in-post/export-map/export-map/export-map-6.jpeg)
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-6.jpeg)
