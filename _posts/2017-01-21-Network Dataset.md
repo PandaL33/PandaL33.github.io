@@ -63,6 +63,7 @@ tags:
 ## 1、无向网络的创建
 
 &emsp;&emsp;ArcCatlog中创建Network Dataset步骤：
+
 1. 打开网络数据集的向导，定义几何网络的名称
 2. 选择参与网络数据集的要素类
 3. 设置是否使用转向数据集
@@ -71,6 +72,7 @@ tags:
 6. 设置权重
 7. 是否建立行驶方向
 7. 建立Network Dataset
+
  数据源：
 
 ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/network-dataset/network-dataset-1.jpeg)
@@ -84,7 +86,8 @@ tags:
 /// <param name="_pDatasetName">要素数据集的路径</param> 
 /// <param name="_pNetName">建立网络的名称</param> 
 /// <param name="_pFtName">参与网络的要素类</param>  
-public void CreateNetworkDataset(string _pWsName, string _pDatasetName, string _pNetName, string _pFtName)
+public void CreateNetworkDataset(string _pWsName, string _pDatasetName, 
+string _pNetName, string _pFtName)
 {
     IDENetworkDataset pDENetworkDataset = new DENetworkDatasetClass();
     pDENetworkDataset.Buildable = true;
@@ -108,7 +111,8 @@ public void CreateNetworkDataset(string _pWsName, string _pDatasetName, string _
     (IEdgeFeatureSource)pEdgeNetworkSource;
     pEdgeFeatureSource.UsesSubtypes = false;
     pEdgeFeatureSource.ClassConnectivityGroup = 1;
-    pEdgeFeatureSource.ClassConnectivityPolicy = esriNetworkEdgeConnectivityPolicy.esriNECPEndVertex;
+    pEdgeFeatureSource.ClassConnectivityPolicy = 
+    esriNetworkEdgeConnectivityPolicy.esriNECPEndVertex;
     //不用转弯数据 
     pDENetworkDataset.SupportsTurns = false;
     IArray pSourceArray = new ArrayClass();
@@ -184,6 +188,7 @@ INASolver的数据成员为：
 最短路径分析的实现：
 
 1、获取网络数据集
+
 ```
 /// <summary> 
 /// 获取网络数据集 
@@ -207,7 +212,9 @@ public INetworkDataset GetNetDataset(IFeatureDataset pFeatureDataset, string _pD
     return pNetWorkDataset as INetworkDataset;
 }
 ```
+
 2、创建网络分析上下文
+
 ```
 /// <summary>
 /// 创建网络分析上下文
@@ -226,7 +233,9 @@ public INAContext CreateNAContext(INetworkDataset networkDataset)
     return pNAContextEdit as INAContext;
 }
 ```
+
 3、添加网络分析图层
+
 ```
 /// <summary>
 /// 添加网络分析图层
@@ -241,7 +250,9 @@ public void AddNALayer(INAContext pNaContext,AxMapControl Mainmap)
     MainMap.AddLayer(pLayer, 0);
 }
 ```
+
 4、设置Stops要素类
+
 ```
 /// <summary> 
 ///  设置Stops要素类
@@ -278,7 +289,9 @@ public void NAStops(INAContext _pNaContext, IFeatureClass _pFtClass, IPointColle
     }
 }
 ```
+
 5、获取分析信息
+
 ```
  IGPMessages gpMessages = new GPMessagesClass();
  bool pBool = pNaContext.Solver.Solve(pNaContext, gpMessages, null);
