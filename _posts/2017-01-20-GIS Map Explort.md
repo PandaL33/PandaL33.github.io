@@ -58,7 +58,7 @@ publicvoidExportEMF(IActiveView pActiveView,string pExportFileName)
 
 ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-4.jpeg)
 
-### 2、PDF输出
+###  2、PDF输出
 ```
 /// <summary>
 /// 以PDF格式输出地图
@@ -91,7 +91,7 @@ null,null);
 
 ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-5.jpeg)
 
-### 3、JPG输出
+###  3、JPG输出
 ```
 /// <summary>
 /// 以JPG格式输出地图
