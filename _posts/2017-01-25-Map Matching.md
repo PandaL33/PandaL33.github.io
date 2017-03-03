@@ -29,7 +29,7 @@ GPS定位坐标偏移现象：
 3）获取圆形缓冲区与匹配道路的交集（邻近道路集合），计算设备定位点到各个邻近道路集合的距离，得到距离设备定位点最近的最邻近道路，计算设备定位点到最邻近道路的投影点，该投影点为设备定位点的道路匹配点（图中匹配道路上的投影红点）。
  ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-4.png)
 
-	算法和流程逻辑 
+##### 算法和流程逻辑 
  ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-5.png)
 
 ### 2、算法实现
