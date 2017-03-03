@@ -34,3 +34,51 @@ GPS定位坐标偏移现象：
 
 ### 2、算法实现
 未完待续。。。
+
+## 道路匹配校准数据获取
+### 1、影像数据获取
+前期准备：
+- 安装google earth 4.3(一定要安装低版本。高版本可能会截取不了）
+- 下载getScreen，设置GE4.3->工具－>选项－>3D视图－>图形模式->选择DirectX 和 使用安全模式 （重新启动）在GE中找到要截取影像数据的地图位置。
+以获取优特公司珠海影像数据为例：
+1）启动google earth并定位所需影像数据位置，运行GetScreen.exe工具。
+  ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-6.png)
+
+2）点击“两点定位”按钮，设置影像数据范围。然后点击“图片计算”按钮，获取截屏数量。最后点击“开始截屏”按钮，并输入输出文件名（如UT.JPG）获取影像数据。
+  ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-7.png)
+
+### 2、匹配道路绘制
+
+1）影像数据配准
+	打开ArcMap并添加GetScreen截取的影像数据，打开影像数据配准工具Georeferencing（菜单Customize----->Toolbars------->Georeferencing）。
+   ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-9.png)
+
+点击Add Control Points工具，点击地图中步骤一设置的控制点，通过Input X and Y窗口，输入根据步骤一获取的控制点坐标（控制点一般取3~5个为宜）。
+ 
+   ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-10.png)
+
+   ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-11.png)
+
+	添加完控制点坐标后，通过Georeferencing菜单的Rectify功能，输出匹配后的影像数据。
+  
+   ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-12.png)
+
+   ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-13.png)
+
+2）道路匹配校准数据绘制
+打开ArcCatlog，右键New----->Shapefile添加道路的shapefile文件，弹窗shapefile文件窗口。
+ 
+   ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-14.png)
+
+输入道路图层名称，选择要素类型Feature Type为Polyline，点击“Edit”按钮设置图层的空间参考。选择Coordinate System------>World------>WGS1984 World Mercator坐标系。
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-15.png)
+
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-16.png)
+
+使用ArcMap打开校准后的影像数据并添加新建的道路shapefile文件，右键道路图层---->Edit Features------>Start Editing启动图层编辑功能。
+    ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-17.png)
+
+	在Create Features窗口的Construction Tools一栏中点击“Line”，根据影像数据中道路的轮廓绘制匹配的道路数据。编辑完成后保存即可完成匹配道路数据的绘制。
+  
+   ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-18.png)
+
