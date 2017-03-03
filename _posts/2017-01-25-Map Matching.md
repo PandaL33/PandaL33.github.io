@@ -40,7 +40,9 @@ GPS定位坐标偏移现象：
 前期准备：
 - 安装google earth 4.3(一定要安装低版本。高版本可能会截取不了）
 - 下载getScreen，设置GE4.3->工具－>选项－>3D视图－>图形模式->选择DirectX 和 使用安全模式 （重新启动）在GE中找到要截取影像数据的地图位置。
-以获取优特公司珠海影像数据为例：
+
+获取影像数据示例：
+
 1）启动google earth并定位所需影像数据位置，运行GetScreen.exe工具。
 
   ![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/map-matching/map-matching-6.png)
