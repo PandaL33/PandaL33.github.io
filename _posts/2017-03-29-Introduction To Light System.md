@@ -11,10 +11,11 @@ tags:
 ## 灯光种类
 
 灯光种类分为：
-Directional Light:平行光
-Point Light：点光源
-Spot Light：聚光灯
-Area Light：区域灯（在渲染烘焙后才产生照明效果）
+
+- Directional Light:平行光
+- Point Light：点光源
+- Spot Light：聚光灯
+- Area Light：区域灯（在渲染烘焙后才产生照明效果）
 
 ## 灯光参数介绍
 
