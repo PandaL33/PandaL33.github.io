@@ -1,24 +1,42 @@
 ---
 layout:     post
-title:      "Unity3D Light"
-subtitle:   " \"GIS\""
+title:      "Introduction To Light System"
+subtitle:   " \"Unity3D\""
 date:       2017-03-29 21:00:00
 author:     "PandaL33"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - Unity3D
 ---
-## 前言
+## 灯光种类
 
-在GIS制图完成后，需要将地图输出成不同的格式，如.emf、.pdf、*.jpg等格式，输出的文件可以方便在计算机上进行浏览查看。
-地图输出可以分为两大类：栅格数据和矢量数据，输出栅格数据的格式有BMP、JPG等，而输出矢量数据的格式有PDF、SVG等。
-IExport接口作为地图输出的主要接口，其数据成员为：
+灯光种类分为：
+Directional Light:平行光
+Point Light：点光源
+Spot Light：聚光灯
+Area Light：区域灯（在渲染烘焙后才产生照明效果）
 
-![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-1.jpeg)
+## 灯光参数介绍
 
-IExport接口被10种输出格式的类实现，如下图：
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/introduction-to-light-system/introduction-to-light-system-1.jpeg)
 
-![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/export-map/export-map-2.jpeg)
+#### Baking 烘培
+- Realtime：实时烘培
+- Baked：手动烘培
+- Mixed:：混合烘培
+#### Range 照明范围
+#### Spot Angle 照明角度
+#### Color 照明颜色
+#### Intensity 照明强度
+#### Bounce Intensity 反射照明角度
+#### Hard Shadows 阴影类型
+- Strength 阴影强度
+- Resolution 阴影分辨率
+- Bias 调节阴影与物体之间的距离
+- Normal Bias 阴影法线参数
+- Shadow Near Plane 阴影贴面
+#### Cookie 灯光可将透明通道的图片投影到物体
+#### Draw Halo 光晕
+#### Culling Mask 灯光蒙板（用于剔除不需要照明的物体）
 
-这10个类对应了ArcGIS所支持的地图输出格式，同时这10个类也可以划分为两大类，即矢量格式和栅格格式。Window平台的分辨率一般为96dpi，而这个也是ArcGIS栅格数据输出的默认分辨率，而对于像PDF这样的分辨率，默认为300dpi。
-
+## 阴影的常见问题及处理
