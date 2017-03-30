@@ -18,7 +18,7 @@ Area Light：区域灯（在渲染烘焙后才产生照明效果）
 
 ## 灯光参数介绍
 
-![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/introduction-to-light-system/introduction-to-light-system-1.jpeg)
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/introduction-to-light-system/introduction-to-light-system-1.png)
 
 #### Baking 烘培
 - Realtime：实时烘培
@@ -45,7 +45,7 @@ Area Light：区域灯（在渲染烘焙后才产生照明效果）
 2、Edit->Project Settings->Quality->Shadows
 Quality Settings 质量设置中关闭了阴影显示。确保质量层级Quality Level设置合理；
 
-![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/introduction-to-light-system/introduction-to-light-system-2.jpeg)
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/introduction-to-light-system/introduction-to-light-system-2.png)
 
 3、场景中所有物体的面渲染器MeshRenderers必须设置为可接受阴影和产生阴影；
 
