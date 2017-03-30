@@ -56,3 +56,17 @@ Quality Settings 质量设置中关闭了阴影显示。确保质量层级Qualit
 4、只有不透明的物体才产生阴影，使用了内置的透明Shader的物体不产生阴影；
 
 5、使用了VertexLit的Shader的物体不能接受阴影，但可以产生阴影；
+
+## 色彩空间
+
+Edit->Project Setting->Player->Other Setting
+
+![alt](https://raw.githubusercontent.com/PandaL33/PandaL33.github.io/master/img/in-post/introduction-to-light-system/introduction-to-light-system-3.png)
+
+Color Space分为：Linear Space和Gamma Space
+
+### 光线衰减
+
+### 光线强度反馈
+
+### 色彩混合
