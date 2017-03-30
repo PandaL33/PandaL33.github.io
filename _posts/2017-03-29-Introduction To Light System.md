@@ -44,6 +44,7 @@ Area Light：区域灯（在渲染烘焙后才产生照明效果）
 ## 阴影的常见问题及处理
 
 1、老显卡不支持阴影；
+
 2、Edit->Project Settings->Quality->Shadows
 Quality Settings 质量设置中关闭了阴影显示。确保质量层级Quality Level设置合理；
 
