@@ -65,8 +65,8 @@ Edit->Project Setting->Player->Other Setting
 
 Color Space分为：Linear Space和Gamma Space
 
-### 光线衰减
+#### 光线衰减
 
-### 光线强度反馈
+#### 光线强度反馈
 
-### 色彩混合
+#### 色彩混合
