@@ -24,6 +24,7 @@ Area Light：区域灯（在渲染烘焙后才产生照明效果）
 - Realtime：实时烘培
 - Baked：手动烘培
 - Mixed:：混合烘培
+
 #### Range 照明范围
 #### Spot Angle 照明角度
 #### Color 照明颜色
@@ -35,6 +36,7 @@ Area Light：区域灯（在渲染烘焙后才产生照明效果）
 - Bias 调节阴影与物体之间的距离
 - Normal Bias 阴影法线参数
 - Shadow Near Plane 阴影贴面
+
 #### Cookie 灯光可将透明通道的图片投影到物体
 #### Draw Halo 光晕
 #### Culling Mask 灯光蒙板（用于剔除不需要照明的物体）
