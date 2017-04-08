@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Rigidbody And Physics Manager"
+title:      "Rigidbody And Collider"
 subtitle:   " \"Unity3D\""
 date:       2017-04-07 21:00:00
 author:     "PandaL33"
@@ -60,6 +60,8 @@ tags:
 - 扫描检测（"void SweepTest(Vector3 direction,out RaycastHit hitInfo,float maxDistance)"）：表示将沿着direction的方向产生一条长度为maxDistance的射线hitInfo，若该射线碰撞到其他物体，则返回true，否则返回false。
 - 扫描检测所有（"RaycastHit[] SweepTestAll(Vector3 direction,float maxDistance)"）：返回储存了direction方向所有检测到的刚体的信息，数组长度不超过128。
 
+## 碰撞器
 
+####
 
 
