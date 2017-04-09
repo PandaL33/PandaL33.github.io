@@ -12,7 +12,7 @@ tags:
 
 物理引擎通过刚性物体赋予真实的物理属性的方式来计算它们的运动、旋转和碰撞反应。
 
-## 刚体
+## 刚体 RigidBody
 
 #### 刚体属性
 
@@ -60,8 +60,14 @@ tags:
 - 扫描检测（"void SweepTest(Vector3 direction,out RaycastHit hitInfo,float maxDistance)"）：表示将沿着direction的方向产生一条长度为maxDistance的射线hitInfo，若该射线碰撞到其他物体，则返回true，否则返回false。
 - 扫描检测所有（"RaycastHit[] SweepTestAll(Vector3 direction,float maxDistance)"）：返回储存了direction方向所有检测到的刚体的信息，数组长度不超过128。
 
-## 碰撞器
+## 碰撞器 Collider
 
-####
+#### 碰撞器类型
 
+- 盒子碰撞器（Box Collider）：方形碰撞器原型，主要适用于门、墙、平台和木箱、角色的躯干或交通工具的外壳。
+- 球体碰撞器（Sphere Collider）：球形碰撞器原型，主要适用于石头、篮球、弹珠等。
+- 胶囊碰撞器（Capsule Collider）：胶囊状碰撞器原型，主要适用于角色控制器上或与其他碰撞器结合应用于形状不规则的物体。
+- 网格碰撞器（Mesh Collider）：在物体网格资源上构建的碰撞器，大小和位置与挂载在物体对象上的Transform属性相同。
+- 车轮碰撞器（Wheel Collider）：自带碰撞检测、车轮物理引擎和基于滑动的轮胎摩擦模型。
+- 地形碰撞器（Terrian Collider）：用于检测地形和地形上物体的碰撞检测，防止地形上加有刚体属性的对象无限制地下落。
 
