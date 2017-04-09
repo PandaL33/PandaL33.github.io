@@ -71,3 +71,13 @@ tags:
 - 车轮碰撞器（Wheel Collider）：自带碰撞检测、车轮物理引擎和基于滑动的轮胎摩擦模型。
 - 地形碰撞器（Terrian Collider）：用于检测地形和地形上物体的碰撞检测，防止地形上加有刚体属性的对象无限制地下落。
 
+#### 物理材质
+
+- Dynamic Friction：滑动摩擦力
+- Static Friction：静摩擦力
+- Bounciness：表面弹性
+- Friction Combine：碰撞体的摩擦力混合方式
+- Bounce Combine：表面弹性混合方式
+- Friction Direction 2：各向异向的方向
+- Dynamic Friction 2：作用于Friction Direction 2方向的滑动摩擦力
+- Static Friction 2：作用于Friction Direction 2方向的静摩擦力
