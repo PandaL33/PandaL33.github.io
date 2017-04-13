@@ -53,3 +53,35 @@ Properties{
 }
 ```
 
+### Subshader
+Subshader基本语法：
+```
+Subshader{[Tags] [CommonState] Pass{}}
+```
+定义通道的类型有：RegularPass、UsePass和GrabPass。
+
+例：
+```
+Subshader{
+    Tags{"Queue"="Transparent"}      //渲染队列为透明队列
+    Pass{
+        Lighting Off                 //关闭光照
+        SetTexture[_MainText]{}      //设置纹理
+    }
+}
+```
+
+### Subshader Tags
+子着色器使用标签Tags告诉Unity渲染引擎或者其他用户如何认证这个SubShader。
+Tags基本语法：
+```
+Tags{"标签1"="值1" "标签2"="值2"}
+```
+标签的标准是键值对，可以有任意个。常用的标签如下：
+- Queue tag——队列标签，Queue标签用来决定对象被渲染的次序。 着色器决定对象所归属的渲染队列，任何透明物体都可以通过这种方法确保自身在不透明物体渲染之后渲染。预选值有：
+    1. Background（背景），默认值为1000；
+    2. Geometry（几何体），默认值为2000；
+    3. AlphaTest（Alaph测试），默认值为2450；
+    4. Transparent（透明），默认值为3000；
+    5. Overlay（覆盖），默认值为4000；
+- 自定义队列标签
