@@ -123,6 +123,7 @@ Pass的基本语法为：
 Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
 ```
 通道渲染设置命令（RenderSetup）有：
+
 |命令    |含义 |说明| 
 |:--------|:---------|:---------|
 | Lighting  |光照| 开启或关闭顶点光照，开关状态的值为On或Off|
