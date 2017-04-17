@@ -39,7 +39,6 @@ Properties用来定义在显示材质设定界面的属性列表。
 | name("display name",Rect)="name"{options}  ||定义矩形纹理（尺寸非2次方）属性，缺省值同2D纹理属性| 
 | name("display name",Cube)="name"{options}  ||定义立方贴图纹理属性，缺省值同2D纹理属性| 
 | name("display name",3D)="name"{options}  ||定义3D纹理属性| 
-||||
 
 例：
 ```
@@ -106,7 +105,6 @@ Tags{"Queue"="Geometry+600"}
 | TreeBillboard ||地形引擎布告板树 | 
 | Grass ||地形引擎草| 
 | GrassBillboard ||地形引擎布告板草| 
-||||
 
 - DisableBatching tag——禁用批处理标签。
     1. True:着色器一直禁用批处理；
