@@ -85,3 +85,55 @@ Tags{"标签1"="值1" "标签2"="值2"}
     4. Transparent（透明），默认值为3000；
     5. Overlay（覆盖），默认值为4000；
 - 自定义队列标签
+自定义队列通过自定义一个队列，来满足特殊的需要；
+例如：
+```
+Tags{"Queue"="Geometry+600"}
+```
+
+    上述代码将对象的设置渲染队列设为2600，介于AlphaTest队列和Transparent队列之间。
+- RenderType tag——渲染类型标签，RenderType标签将着色器分为若干个预定义组。
+|对列名称    | |说明| 
+|:--------|---------:|:---------|
+| Opaque  || 不透明，用于大多数着色器（法线着色器、自发光着色器、反射着色器以及地形着色器）|
+| Transparent  ||透明，用于大多数半透明着色器（透明着色器、粒子着色器、字体着色器、地形额外通道着色器）| 
+| TansparentCutout  ||遮蔽的透明着色器（透明镂空着色器、两个通道植被着色器）| 
+| Background  ||天空盒着色器| 
+| Overlay ||GUITexture、光晕着色器、闪光着色器| 
+| TreeOpaque || 地形引擎树皮着色器 | 
+| TreeTransparentCutout || 地形引擎树叶 | 
+| TreeBillboard ||地形引擎布告板树 | 
+| Grass ||地形引擎草| 
+| GrassBillboard ||地形引擎布告板草| 
+||||
+
+- DisableBatching tag——禁用批处理标签。
+    1. True:着色器一直禁用批处理；
+    2. False：不禁用批处理，默认值；
+    3. LODFading：当LOD fading被激活时禁用批处理；
+- ForceNoShadowCasting tag——强制不投射阴影标签。
+- IgnoreProjecttor——忽略投影标签。
+- CanUseSpriteAtlas tag——使用精灵图集标签。
+- PreviewType tag——预览类型标签，默认以材质球形式展示。
+
+### Pass
+Subshader的渲染方案由一个个通道（Pass）来执行，Subshader可以包含多个Pass块，每个Pass都使几何对象被渲染一次。
+Pass的基本语法为：
+```
+Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
+```
+通道渲染设置命令（RenderSetup）有：
+|命令    |含义 |说明| 
+|:--------|:---------|:---------|
+| Lighting  |光照| 开启或关闭顶点光照，开关状态的值为On或Off|
+| Material{材质块}  |材质|定义一个使用顶点光照管线的材质| 
+| ColorMaterial  |颜色集|当计算顶点光照时使用顶点颜色，颜色集可以是AmbientAndDiffuse或Emission| 
+| Color  |颜色|设置当顶点光照关闭时所使用的颜色| 
+| Fog{雾块} |雾|设置雾参数| 
+| AlphaTest |Alpha测试| Less、Greater、LEqual、GEqual、Equal、NotEqual、Always,默认值为LEqual | 
+| ZTest |深度测试模式| 设置深度测试模式：Less、Greater、LEqual、GEqual、Equal、NotEqual、Always| 
+| ZWrite |深度写模式|开启或关闭深度写模式，开关状态的值为On、Off | 
+| Blend |混合模式|设置混合模式：SourceBlendMode、DestBlendMode、AlphaSourceBlendMode、AlphaDestBlendMode| 
+| ColorMask |颜色遮罩|设置颜色遮罩，颜色值可以是RGB或A或0或任何R、G、B、A的组合，设置为0将关闭所有颜色通道的渲染| 
+| Offset |偏移因子|设置深度偏移，这个命令仅接收常数参数| 
+||||
