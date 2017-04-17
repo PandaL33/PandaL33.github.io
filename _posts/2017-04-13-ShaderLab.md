@@ -137,4 +137,6 @@ Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
 | Blend |混合模式|设置混合模式：SourceBlendMode、DestBlendMode、AlphaSourceBlendMode、AlphaDestBlendMode| 
 | ColorMask |颜色遮罩|设置颜色遮罩，颜色值可以是RGB或A或0或任何R、G、B、A的组合，设置为0将关闭所有颜色通道的渲染| 
 | Offset |偏移因子|设置深度偏移，这个命令仅接收常数参数| 
-||||
+
+### Fallback
+
