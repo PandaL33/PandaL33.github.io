@@ -8,7 +8,7 @@ header-img: "img/post-bg-2015.jpg"
 tags:
     - Unity3D
 ---
-## ShanderLab
+## ShaderLab
 
 Unity中的着色器程序使用的是ShaderLab着色语言，同时支持使用Cg、HLSL和GLSL编写的着色器程序。
 
