@@ -143,6 +143,3 @@ Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
     退回到给定名称的着色器。
 - Fallback Off
     显示声明没有降级并且不会打印任何警告，甚至没有子着色器会被当前硬件运行。
-
-### CustomEditor
-
