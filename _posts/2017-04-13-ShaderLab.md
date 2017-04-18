@@ -139,4 +139,11 @@ Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
 | Offset |偏移因子|设置深度偏移，这个命令仅接收常数参数| 
 
 ### Fallback
+降级（Fallback）定义在所有子着色器后，如果没有任何子着色器能被运行到当前硬件上，将使用降级着色器。常用语法如下：
+- Fallback "着色器名"
+    退回到给定名称的着色器。
+- Fallback Off
+    显示声明没有降级并且不会打印任何警告，甚至没有子着色器会被当前硬件运行。
+
+### CustomEditor
 
