@@ -8,7 +8,7 @@ header-img: "img/post-bg-2015.jpg"
 tags:
     - Unity3D
 ---
-## ShanderLab
+## ShaderLab
 
 Unity中的着色器程序使用的是ShaderLab着色语言，同时支持使用Cg、HLSL和GLSL编写的着色器程序。
 
@@ -39,7 +39,6 @@ Properties用来定义在显示材质设定界面的属性列表。
 | name("display name",Rect)="name"{options}  ||定义矩形纹理（尺寸非2次方）属性，缺省值同2D纹理属性| 
 | name("display name",Cube)="name"{options}  ||定义立方贴图纹理属性，缺省值同2D纹理属性| 
 | name("display name",3D)="name"{options}  ||定义3D纹理属性| 
-||||
 
 例：
 ```
@@ -93,6 +92,7 @@ Tags{"Queue"="Geometry+600"}
 
     上述代码将对象的设置渲染队列设为2600，介于AlphaTest队列和Transparent队列之间。
 - RenderType tag——渲染类型标签，RenderType标签将着色器分为若干个预定义组。
+
 |对列名称    | |说明| 
 |:--------|---------:|:---------|
 | Opaque  || 不透明，用于大多数着色器（法线着色器、自发光着色器、反射着色器以及地形着色器）|
@@ -105,7 +105,6 @@ Tags{"Queue"="Geometry+600"}
 | TreeBillboard ||地形引擎布告板树 | 
 | Grass ||地形引擎草| 
 | GrassBillboard ||地形引擎布告板草| 
-||||
 
 - DisableBatching tag——禁用批处理标签。
     1. True:着色器一直禁用批处理；
