@@ -143,3 +143,46 @@ Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
     退回到给定名称的着色器。
 - Fallback Off
     显示声明没有降级并且不会打印任何警告，甚至没有子着色器会被当前硬件运行。
+
+### Unity3D 5.X 内置着色器
+
+#### 根据应用对象的不同分为：
+
+- 普通（Normal）：用于不透明的对象；
+- 透明（Transparent）：用于半透明和全透明的对象；
+- 透明镂空效果（TransparentCutOut）：用于由完全透明和完全不透明部分组成（不含半透明部分）的对象，像栅栏一样；
+- 自发光（Self-IIIuminated Shader Family）：用于有自发光效果的对象；
+- 反射（Reflective Shader Family）：用于能反射环境立方体贴图的不透明对象；
+
+#### 不同光照效果的计算开销从低到高排序
+
+- Unlit：仅适用纹理颜色，不受光照影响；
+- VertexLit：顶点光照；
+- Diffuse：漫反射；
+- Specular：在漫反射基础上增加高光计算；
+- Normal Mapped：法线贴图，增加一张法线贴图和几个着色器指令；
+- Normal Mapped Specular：带高光法线贴图；
+- Parallax Normal Mapped：视差法线贴图，增加了视差贴图的计算开销；
+- Parallax Normal Mapped Specular：带高光视差法线贴图
+
+#### StandardShader 属性
+
+|属性    | |含义| 
+|:--------|---------:|:---------|
+| Rendering Model  || 渲染模式，包含Opaque（不透明）、Fade（渐变）、Transparent（透明）和Cutout（镂空）|
+| Albedo  ||漫反射，设置漫反射的贴图或颜色值| 
+| Metallic ||金属，设置金属的贴图或颜色值（不能和Smoothness属性同时应用）| 
+| Smoothness ||光滑度，设置物体表面的光滑程度（不能和Metallic属性同时应用）| 
+| Normal Map ||法线贴图，用于描绘物体表面凹凸程度的法线贴图| 
+| Height Map ||高度图，用于描述视差偏移的灰度图| 
+| Occlusion ||散射，用于设置照射到物体表面的非直接光照散射的贴图| 
+| Emission ||自发光，用于控制物体表面自发光颜色和强度的贴图| 
+| Detail Mask ||细节蒙版，用于设置Secondary Maps的蒙版贴图| 
+| Tilling ||平铺，用于设置贴图在物体表面的平铺值| 
+| Offset ||偏移，用于设置贴图在物体表面的偏移值| 
+| Secondary Maps ||2号贴图，带UV通道的2号贴图| 
+| Detail Albedo  ||细节漫反射，2号贴图的漫反射贴图| 
+| Normal Map  ||法线贴图，2号贴图的法线贴图| 
+| Tilling  ||平铺，用于设置2号贴图在物体表面的平铺值| 
+| Offset  ||偏移，用于设置2号贴图在物体表面的偏移值| 
+| UV Set  ||UI集，用于设置物体的UV集| 
