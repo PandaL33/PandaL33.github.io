@@ -58,7 +58,7 @@ options选项包含如下几项：
 - LightmapMode：选择该选项，则纹理 将受渲染器的光照贴图参数影响。纹理将不会从材质中获取，而是取自渲染器的设置。
 
 ### Subshader
-Subshader基本语法：
+Subshader包含子着色器标签（可选）、通用状态（可选）和Pass列表组成，基本语法：
 ```
 Subshader{[Tags] [CommonState] Pass{}}
 ```
@@ -174,6 +174,24 @@ UsePass "Specular/BASE" //使用高光着色器Specular中名为BASE的Pass
     退回到给定名称的着色器。
 - Fallback Off
     显示声明没有降级并且不会打印任何警告，甚至没有子着色器会被当前硬件运行。
+
+### Category（分类）
+分类用于提供子着色器继承的命令，比如着色器中的多个子着色器都需要关闭雾效、设置混合模式。例：
+```
+Shader "example"{
+    Category{
+        Fog{Mode Off}
+        Blend One One
+        SubShader{
+
+        }
+        //...
+        SubShader{
+            
+        }
+    }
+}
+```
 
 ### Unity3D 5.X 内置着色器
 
