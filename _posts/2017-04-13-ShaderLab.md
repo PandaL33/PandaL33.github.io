@@ -157,9 +157,10 @@ Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
 SetTexture 纹理属性 {[命令选项]}
 ```
 命令选项包括：
-    1. combine：将两个颜色源混合，混合的源可以是Previous（上一次SetTexture的结果）、constant（常量颜色值）、primary（顶点颜色）和texture（纹理颜色）。
-    2. constantColor:设置一个常量颜色值。
-    3. matrix：设置矩阵对纹理坐标进行转换。
+
+1. combine：将两个颜色源混合，混合的源可以是Previous（上一次SetTexture的结果）、constant（常量颜色值）、primary（顶点颜色）和texture（纹理颜色）。
+2. constantColor:设置一个常量颜色值。
+3. matrix：设置矩阵对纹理坐标进行转换。
 
 * UsePass：可以通过UsePass来重用其他着色器中命名的Pass，例如：
 
