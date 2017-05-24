@@ -185,4 +185,4 @@ Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
 | Normal Map  ||法线贴图，2号贴图的法线贴图| 
 | Tilling  ||平铺，用于设置2号贴图在物体表面的平铺值| 
 | Offset  ||偏移，用于设置2号贴图在物体表面的偏移值| 
-| UV Set  ||UI集，用于设置物体的UV集| 
+| UV Set  ||UV集，用于设置物体的UV集| 
