@@ -164,7 +164,9 @@ SetTexture 纹理属性 {[命令选项]}
 
 * UsePass：可以通过UsePass来重用其他着色器中命名的Pass，例如：
 
+```
 UsePass "Specular/BASE" //使用高光着色器Specular中名为BASE的Pass
+```
 
 * GrabPass：将屏幕抓取到一个纹理中，供后续的Pass使用，可以通过_GrabTexture来访问。
 
@@ -187,7 +189,7 @@ Shader "example"{
         }
         //...
         SubShader{
-            
+
         }
     }
 }
