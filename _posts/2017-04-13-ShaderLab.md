@@ -7,6 +7,7 @@ author:     "PandaL33"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - Unity3D
+    - Shader
 ---
 ## ShaderLab
 
