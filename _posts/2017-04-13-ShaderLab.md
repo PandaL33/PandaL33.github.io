@@ -52,12 +52,17 @@ Properties{
 }
 ```
 
+options选项包含如下几项：
+
+- TexGen：纹理生成模式，可以是ObjectLinear、EysLinear、SphereMap、CubeReflect、CubeNormal中一种，这些模式与OpenGL的纹理生成模式相对应。如果使用了自定义的顶点程序，那么该参数将被忽略；
+- LightmapMode：选择该选项，则纹理 将受渲染器的光照贴图参数影响。纹理将不会从材质中获取，而是取自渲染器的设置。
+
 ### Subshader
 Subshader基本语法：
 ```
 Subshader{[Tags] [CommonState] Pass{}}
 ```
-定义通道的类型有：RegularPass、UsePass和GrabPass。
+定义Pass通道的类型有：RegularPass、UsePass和GrabPass。
 
 例：
 ```
@@ -121,7 +126,10 @@ Pass的基本语法为：
 ```
 Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
 ```
-通道渲染设置命令（RenderSetup）有：
+
+- 名称和标签（Name and Tags）：可以定义Pass名字以及任意数量的标签，为Pass命名后，可以在别的着色器上通过Pass名称来引用它。标签则可以用来向渲染管线说明Pass的意图，形式为“键-值”。
+
+- 通道渲染设置命令（RenderSetup）有：
 
 |命令    |含义 |说明| 
 |:--------|:---------|:---------|
@@ -136,6 +144,28 @@ Pass{[Name and Tags] [RenderSetup] [TextureSetup]}
 | Blend |混合模式|设置混合模式：SourceBlendMode、DestBlendMode、AlphaSourceBlendMode、AlphaDestBlendMode| 
 | ColorMask |颜色遮罩|设置颜色遮罩，颜色值可以是RGB或A或0或任何R、G、B、A的组合，设置为0将关闭所有颜色通道的渲染| 
 | Offset |偏移因子|设置深度偏移，这个命令仅接收常数参数| 
+| Cull |裁剪|设置裁剪模式，模式包含Back、Front和Off| 
+| Stencil |蒙版|用蒙版来实现像素的取舍，选项有Keep、Zero、Replace、IncrSat、DecrSat、Invert、IncrWarp和DecWrap| 
+| ColorMask |颜色遮罩|设置颜色遮罩，当值为0时关闭所有颜色通道的渲染，取值为RGB、A、0或R,G,B,A的任意组合| 
+| SeparateSecular |高光颜色|开启或关闭顶点光照的独立高光颜色，取值为On或Off| 
+
+- 纹理设置（TextureSetup）
+纹理设置用于固定管线，如果使用表面着色器或自定义的顶点及片段着色器，那么纹理设置将被忽略。
+
+纹理设置语法为：
+```
+SetTexture 纹理属性 {[命令选项]}
+```
+命令选项包括：
+    1. combine：将两个颜色源混合，混合的源可以是Previous（上一次SetTexture的结果）、constant（常量颜色值）、primary（顶点颜色）和texture（纹理颜色）。
+    2. constantColor:设置一个常量颜色值。
+    3. matrix：设置矩阵对纹理坐标进行转换。
+
+* UsePass：可以通过UsePass来重用其他着色器中命名的Pass，例如：
+
+UsePass "Specular/BASE" //使用高光着色器Specular中名为BASE的Pass
+
+* GrabPass：将屏幕抓取到一个纹理中，供后续的Pass使用，可以通过_GrabTexture来访问。
 
 ### Fallback
 降级（Fallback）定义在所有子着色器后，如果没有任何子着色器能被运行到当前硬件上，将使用降级着色器。常用语法如下：
