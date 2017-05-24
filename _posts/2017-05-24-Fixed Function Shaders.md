@@ -2,7 +2,7 @@
 layout:     post
 title:      "Fixed Function Shaders"
 subtitle:   " \"固定功能管线着色器\""
-date:       2017-05- 09:37:26
+date:       2017-05-24 09:37:26
 author:     "PandaL33"
 header-img: "img/post-bg-2015.jpg"
 tags:
