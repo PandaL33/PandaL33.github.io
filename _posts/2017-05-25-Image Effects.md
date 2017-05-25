@@ -180,7 +180,7 @@ Image Effects主要应用在Camera对象上，为画面添加视觉效果。Unit
  - Texture Ramp：渐变纹理，单击该项右侧的圆圈按钮可以指定图片纹理，功能与Color Correction色彩校正特效中的Texture Ramp功能相似
  - Ramp Offset：位移，用于控制渐变纹理采样的位移
 
- #### Motion Blur：运动模糊特效
+#### Motion Blur：运动模糊特效
 
  运动模糊特效通过保留之前渲染帧的图像形成的运动轨迹效果，从而增强快速运动的感觉。其属性如下：
 
