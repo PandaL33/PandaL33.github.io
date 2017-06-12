@@ -16,7 +16,7 @@ tags:
 - Generate OffMeshLinks：可以自动根据Drop Height（下落高度）和Jump Distance（跳跃距离）的参数设置用关系线来连接分离的网格；
 - Navigation Area：导航区域设置。在默认情况下分为Walkable（行走区域）、Not Walkable（不可行走层）和Jump（跳跃层）；
 
-### Bask参数面板
+### Bake参数面板
 
 - Agent Radius：具有代表性的物体半径。物体半径越小，生成网格的面积越大，越靠近静态物体的边缘；
 - Agent Height：具有代表性的物体高度；
@@ -25,9 +25,9 @@ tags:
 - Drop Height：允许的最大下落距离；
 - Jump Distance：允许的最大跳跃距离；
 - Advanced：高度参数调节
-    1. Manual Voxel Size：选中手动输入像素值；
-    2. Voxel Size：输入像素值；
-    3. Min Region Area：网格面积小于该值得地方，将不生成导航网格；
+    1. Manual Voxel Size：是否手动调整烘焙的单元尺寸；
+    2. Voxel Size：烘焙单元尺寸，控制烘焙的精度；
+    3. Min Region Area：网格面积小于该值的地方，将不生成导航网格；
     4. Height Mesh：选中该选项，将会保存高度信息，同时也会消耗一些性能和存储空间；
 
 ### Nav Mesh Agent参数面板
